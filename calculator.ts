@@ -14,7 +14,7 @@ const calculation = await inquirer.prompt([
   {
     type: "list",
     name: "Selectopreators",
-    choices: ["+", "-", "*", "/"],
+    choices: ["+", "-", "*", "/", "%"],
   },
 ]);
 
@@ -41,7 +41,12 @@ if (calculation.Selectopreators == "+") {
 } else if (calculation.Selectopreators == "/") {
   console.log(
     "the division of two numbers is",
-    calculation.fristvalue * calculation.secoundvalue
+    calculation.fristvalue / calculation.secoundvalue
+  );
+} else if (calculation.Selectopreators == "%") {
+  console.log(
+    "the division of two numbers is",
+    calculation.fristvalue % calculation.secoundvalue
   );
 } else {
   console.log("you have select an invalid opreator");
